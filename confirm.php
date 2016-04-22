@@ -9,6 +9,11 @@ include_once 'errorhandler.php';
 session_start();
 	include_once("./PHPMailer-master/PHPMailerAutoload.php");
 	include_once("mail.php");
+	if(isset($_SESSION['total'])){
+		$total = $_SESSION['total'];
+	}else {
+		$total = 0;
+	}
     
     $total = $_SESSION['total'];
     $email = $_SESSION['email'];
@@ -34,6 +39,7 @@ session_start();
         'theCaption'=>'Shoe List',
         'fname'=>$fname,
         'lname'=>$lname,
-        'email'=>$email);
+        'email'=>$email,
+		'total'=>$total);
 
 	$template->display($params);

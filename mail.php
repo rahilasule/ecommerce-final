@@ -25,7 +25,10 @@ include_once 'errorhandler.php';
             $mail->isHTML(true);
 
             $mail->Subject='Order has been received!';
-            $mail->Body='<p>Hello '.$fname.',</p><p>Your order has been received and will be processed shortly.<br> Thanks for your patronage! :)</p>
+            $mail->Body='<p>Hello '.$fname.',</p><h2>THANKS FOR YOUR ORDER</h2>
+                        <p>Your order has been received and will be processed shortly.
+                         Now that we’ve started working on it, we’re not able to change 
+                         anything including the items or delivery address<br> Thanks for your patronage! :)</p>
 						<p style=text-align:"left">The Biruang Store Team.</p>';
             $mail->SMTPOptions=array(
                 'ssl'=>array(
@@ -35,11 +38,11 @@ include_once 'errorhandler.php';
                 )
             );
             if(!$mail->send()) {
-                echo 'Message could not be sent.';
-                echo 'Mailer Error: ' . $mail->ErrorInfo;
+                //echo 'Message could not be sent.';
+                //echo 'Mailer Error: ' . $mail->ErrorInfo;
                 exit;
             } else{
-                echo 'Message has been sent';
+                //echo 'Message has been sent';
             }
 
         }

@@ -177,6 +177,8 @@ ul.navig li a:after{
   color: #7e7f84;
   padding: .7em .7em .7em 2em;
 }
+
+*:focus {outline: none;}
 /*-- banner --*/
 .banner-bg{
 	background:url(../images/6.jpg) no-repeat 0px 0px;
