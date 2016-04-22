@@ -4,64 +4,62 @@
 {% block BODY %}
     <div class="banner-top">
         <div class="container">
-            <h1>Checkout</h1>
+            <h1 style="text-align:center">CHECKOUT</h1>
             <em></em>
         </div>
     </div>
     <!--login-->
     <div class="container">
 
-        <div class="login">
+        <div class="login" style="margin-left: 40px; margin-right: auto;">
             <h3>Shipping Information</h3><br>
             <form action="checkout.php" method="post">
                <table>
                    <tr>
-                    <div>
-                        Firstname:   <input type="text" placeholder="Firstname" required name="firstname">
-                        <span class="error">* <?php if(isset($_SESSION['firstnameErr'])){ echo "{$_SESSION['firstnameErr']}";} ?></span>
+                    <div style="padding: 20px;">
+                        Firstname:   <input type="text" placeholder="Rafik" required name="firstname">
+                        <span class="error">* </span>
                     </div> </tr>
                    <tr>
-                    <div>
-                        Lastname:   <input type="text" placeholder="Lastname" required name="lastname">
-                        <span class="error">* <?php if(isset($_SESSION['lastnameErr'])){ echo "{$_SESSION['lastnameErr']}";} ?></span>
+                    <div style="padding: 20px;">
+                        Lastname:   <input type="text" placeholder="Iliasu" required name="lastname">
+                        <span class="error">* </span>
                     </div></tr>
                    <tr>
-                    <div>
-                        Address:   <input type="text" placeholder="Address" required name="address">
-                        <span class="error">* <?php if(isset($_SESSION['addErr'])){ echo "{$_SESSION['addErr']}";} ?></span>
+                    <div style="padding: 20px;">
+                        Address:   <input type="text" placeholder="420, Jumpstreet" required name="address">
+                        <span class="error">* </span>
                     </div></tr>
                    <tr>
-                    <div>
-                        City:   <input type="text" placeholder="City" required name="city">
-                        <span class="error">* <?php if(isset($_SESSION['cityErr'])){ echo "{$_SESSION['cityErr']}";} ?></span>
+                    <div style="padding: 20px;">
+                        City:   <input type="text" placeholder="Detroit" required name="city">
+                        <span class="error">* </span>
                     </div></tr>
                    <tr>
-                    <div>
-                        State:    <input type="text" placeholder="State" name="state">
-                        <span class="error">* <?php if(isset($_SESSION['stateErr'])){ echo "{$_SESSION['stateErr']}";} ?></span>
+                    <div style="padding: 20px;">
+                        State:    <input type="text" placeholder="Michigan" name="state">
                     </div></tr>
                    <tr>
-                    <div>
-                        Zipcode:    <input type="text" placeholder="Zipcode" required name="zipcode">
-                        <span class="error">* <?php if(isset($_SESSION['zcodeErr'])){ echo "{$_SESSION['zcodeErr']}";} ?></span>
+                    <div style="padding: 20px;">
+                        Zipcode:    <input type="text" placeholder="90210" required name="zipcode">
                     </div></tr>
                    <tr>
-                    <div>
-                        Country:    <input type="text" placeholder="Country" required name="country">
-                        <span class="error">* <?php if(isset($_SESSION['ctyErr'])){ echo "{$_SESSION['ctyErr']}";} ?></span>
+                    <div style="padding: 20px;">
+                        Country:    <input type="text" placeholder="USA" required name="country">
+                        <span class="error">* </span>
                     </div></tr>
                    <tr>
-                    <div>
-                        Phone number:   <input type="text" placeholder="Phone Number" required name="phone">
-                        <span class="error">* <?php if(isset($_SESSION['phoneErr'])){ echo "{$_SESSION['phoneErr']}";} ?></span>
+                    <div style="padding: 20px;">
+                        Phone number:   <input type="text" placeholder="0549907574" required name="phone">
+                        <span class="error">* </span>
                     </div></tr>
                    <tr>
-                       <div>
-                           Email:   <input type="text" placeholder="Email" required name="email">
-                           <span class="error">* <?php if(isset($_SESSION['emailErr'])){ echo "{$_SESSION['emailErr']}";} ?></span>
+                       <div style="padding: 20px;">
+                           Email:   <input type="text" placeholder="edward.iliasu@ashesi.edu.gh" required name="email">
+                           <span class="error">* </span>
                        </div></tr>
                    <tr>
-                    <div><input type="submit" value="SUBMIT"></div></tr>
+                    <div style="padding: 20px;"><input type="submit" value="SUBMIT"></div></tr>
                </table>
 
             </form> <br>

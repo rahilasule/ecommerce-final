@@ -1148,6 +1148,13 @@ h4.sold-out a{
 	font-size: 14px;
 	margin: 0;
 }
+
+.product h4{
+	color: #686767;
+	font-size: 14px;
+	margin: 0;
+}
+
 .product p{
 	color:#686767;
 	font-size:14px;
@@ -1157,8 +1164,8 @@ h4.sold-out a{
 }
 .product p span{
 	background:url(../images/tralle.png) no-repeat 0px 0px;
-	width:15px;
-	height:15px;
+	width:10px;
+	height:10px;
 	display:inline-block;
 	vertical-align:middle;
 }

@@ -1,19 +1,25 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: rahilasule
+ * Date: 4/22/16
+ * Time: 10:07 AM
+ */
 include_once 'errorhandler.php';
 	session_start();
 	$mysqli = mysqli_connect('localhost' , 'root', '','shoedb');
 	if(isset($_SESSION['total'])){
-		$total = $_SESSION['total'];
-	}else {
-		$total = 0;
-	}
+        $total = $_SESSION['total'];
+    }else {
+        $total = 0;
+    }
 
 	if (isset($_GET['page'])) {
-	   $page = $_GET['page'];
-	} else {
-	   $page = 1;
+        $page = $_GET['page'];
+    } else {
+        $page = 1;
 
-	}
+    }
 	//$mysqli = mysqli_connect('localhost' , 'root', '','chocolateDatabase');
 	$str_query= mysqli_query($mysqli, "SELECT * FROM shoes WHERE shoetype ='men'");
 	$numrows= mysqli_num_rows($str_query);
@@ -29,11 +35,11 @@ include_once 'errorhandler.php';
 	$page = (int)$page; //convert to int so that comparison is done for integers and not strings
 	
 	if ($page > $lastpage) {
-	   $page = $lastpage;
-	} 
+        $page = $lastpage;
+    } 
 	if ($page < 1) {
-	   $page = 1;
-	}
+        $page = 1;
+    }
 	$limit = 'LIMIT ' .($page - 1) * $rows_per_page .',' .$rows_per_page;
 
 	$str_query="SELECT shoeid, shoename, brand.brandname, price, pic FROM shoes 
@@ -49,10 +55,11 @@ include_once 'errorhandler.php';
 	
 	$myarray = array();
 	while(mysqli_stmt_fetch($stmt)){
-		$myarray[]=array('shoeid'=>$shoeid,'shoename' =>$shoename , 'brand_name'=>$brandname, 'price'=>$price, 'pic'=>$pic);
-	}
+        $myarray[]=array('shoeid'=>$shoeid,'shoename' =>$shoename , 'brand_name'=>$brandname, 'price'=>$price, 'pic'=>$pic);
+    }
        
-	mysqli_close($mysqli);
+	//mysqli_close($mysqli);
+mysqli_connect("localhost","root","xx");
 
 require_once'./vendor/autoload.php';
 	Twig_Autoloader::register();
@@ -61,11 +68,11 @@ require_once'./vendor/autoload.php';
 	$twig = new Twig_Environment($loader);
 	$template = $twig->loadTemplate('men.twig');
 		$params = array('total'=>$total,
-		'values'=>$myarray,
-		'page'=>$page,
-		'lastpage'=>$lastpage,
-		'prev'=>$prevpage,
-		'next'=>$nextpage,
-		'pages'=>$pages);
+            'values'=>$myarray,
+            'page'=>$page,
+            'lastpage'=>$lastpage,
+            'prev'=>$prevpage,
+            'next'=>$nextpage,
+            'pages'=>$pages);
 
 	$template->display($params);
