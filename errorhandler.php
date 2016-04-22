@@ -5,7 +5,8 @@
  * Date: 4/21/16
  * Time: 1:25 AM
  */
-define("LOG_FILE", __DIR__.'/temp/errors.log');
+//include_
+define("LOG_FILE", "temp/errors.log");
 define("DEST_LOGFILE", "3");
 
 function myErrorHandler($errno, $errstr, $errfile, $errline)
@@ -31,10 +32,12 @@ function myErrorHandler($errno, $errstr, $errfile, $errline)
 
         case E_USER_NOTICE:
             echo "<b>Oops! Notice:</b> [$errno] $errstr<br />\n";
+            error_log("<b>Oops! Notice:</b> [$errno] $errstr<br />\n", DEST_LOGFILE, LOG_FILE);
             break;
 
         default:
             echo "Oops! Unknown error type: [$errno] $errstr<br />\n";
+            error_log("<b>Oops! Unknown error type: [$errno] $errstr<br />\n", DEST_LOGFILE, LOG_FILE);
             break;
     }
 

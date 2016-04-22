@@ -27,19 +27,4 @@ session_start();
 	$mail = new Mail();
 	$mail->sendMail($fname,$lname,$email);
 
-
-
-	require_once'./vendor/autoload.php';
-	Twig_Autoloader::register();
-
-	$loader = new Twig_Loader_Filesystem('./template');
-	$twig = new Twig_Environment($loader);
-	$template = $twig->loadTemplate('confirmation.twig');
-	$params = array(
-        'theCaption'=>'Shoe List',
-        'fname'=>$fname,
-        'lname'=>$lname,
-        'email'=>$email,
-		'total'=>$total);
-
-	$template->display($params);
+header("location: confirmpage.php");

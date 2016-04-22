@@ -2,6 +2,57 @@
 
 	{# BODY block will be overidden #}
 {% block BODY %}
+    <script type="text/javascript">
+
+        function validateForm(form){
+
+            var firstname = document.forms["form"]["firstname"].value;
+            var lastname = document.forms["form"]["lastname"].value;
+            var address = document.forms["form"]["address"].value;
+            var email = document.forms["form"]["email"].value;
+            var city = document.forms["form"]["city"].value;
+            var state = document.forms["form"]["state"].value;
+            var country = document.forms["form"]["country"].value;
+            var phonenumber = document.forms["form"]["phone"].value;
+            var zipcode = document.forms["form"]["zipcode"].value;
+
+
+            if(firstname == null || firstname == ""){
+                alert("Firstname must be filled out");
+            }
+
+            if(lastname == null || lastname == ""){
+                alert("Lastname must be filled out");
+            }
+
+            if(address == null || address == ""){
+                alert("Address must be filled out");
+            }
+
+            if(email == null || email == ""){
+                alert("Email must be filled out");
+            }
+
+            if(city == null || city == ""){
+                alert("City must be filled out");
+            }
+
+            if(state == null || state == ""){
+                alert("State must be filled out");
+            }
+
+            if(phonenumber == null || phonenumber == ""){
+                alert("Phone number must be filled out");
+            }
+
+            if(zipcode == null || zipcode == ""){
+               alert("Zipcode must be filled out");
+            }
+            return true;
+        }
+
+
+    </script>
     <div class="banner-top">
         <div class="container">
             <h1 style="text-align:center">CHECKOUT</h1>
@@ -13,49 +64,49 @@
 
         <div class="login" style="margin-left: 40px; margin-right: auto;">
             <h3>Shipping Information</h3><br>
-            <form action="checkout.php" method="post">
+            <form action="checkout.php" name="form" method="post">
                <table>
                    <tr>
                     <div style="padding: 20px;">
-                        Firstname:   <input type="text" placeholder="Rafik" required name="firstname">
+                        Firstname:   <input type="text" placeholder="Rafik" pattern="^[a-zA-Z]*$" required name="firstname">
                         <span class="error">* </span>
                     </div> </tr>
                    <tr>
                     <div style="padding: 20px;">
-                        Lastname:   <input type="text" placeholder="Iliasu" required name="lastname">
+                        Lastname:   <input type="text" placeholder="Iliasu" pattern="^[a-zA-Z]*$" required name="lastname">
                         <span class="error">* </span>
                     </div></tr>
                    <tr>
                     <div style="padding: 20px;">
-                        Address:   <input type="text" placeholder="420, Jumpstreet" required name="address">
+                        Address:   <input type="text" placeholder="420, Jumpstreet" pattern="^([0-9a-zA-Z\,\s]*)$" required name="address">
                         <span class="error">* </span>
                     </div></tr>
                    <tr>
                     <div style="padding: 20px;">
-                        City:   <input type="text" placeholder="Detroit" required name="city">
+                        City:   <input type="text" placeholder="Detroit" pattern="^([a-zA-Z]*)$" required name="city">
                         <span class="error">* </span>
                     </div></tr>
                    <tr>
                     <div style="padding: 20px;">
-                        State:    <input type="text" placeholder="Michigan" name="state">
+                        State:    <input type="text" placeholder="Michigan" pattern="^([a-zA-Z]*)$" name="state">
                     </div></tr>
                    <tr>
                     <div style="padding: 20px;">
-                        Zipcode:    <input type="text" placeholder="90210" required name="zipcode">
+                        Zipcode:    <input type="text" placeholder="90210" pattern="^([0-9]*)$" required name="zipcode">
                     </div></tr>
                    <tr>
                     <div style="padding: 20px;">
-                        Country:    <input type="text" placeholder="USA" required name="country">
+                        Country:    <input type="text" placeholder="USA" pattern="^([a-zA-Z]*)$" required name="country">
                         <span class="error">* </span>
                     </div></tr>
                    <tr>
                     <div style="padding: 20px;">
-                        Phone number:   <input type="text" placeholder="0549907574" required name="phone">
+                        Phone number:   <input type="text" placeholder="0549907574" pattern="^\d{3}[]*\d{3}[]*\d{4}$" required name="phone">
                         <span class="error">* </span>
                     </div></tr>
                    <tr>
                        <div style="padding: 20px;">
-                           Email:   <input type="text" placeholder="edward.iliasu@ashesi.edu.gh" required name="email">
+                           Email:   <input type="email" placeholder="edward.iliasu@ashesi.edu.gh" pattern="^[^0-9_][a-z0-9]+([.][a-z0-9_]+)*[@][a-z0-9_]+([.][a-z0-9]+)*[.][a-z]{2,4}$" required name="email">
                            <span class="error">* </span>
                        </div></tr>
                    <tr>

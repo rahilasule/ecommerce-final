@@ -77,7 +77,7 @@ $mysqli = mysqli_connect('localhost' , 'root', '','shoedb');
         if (isset($_SESSION['cart'][$sid])) {
             $_SESSION['cart'][$sid]++;
         }
-        //header("location: cart.php");
+        header("location: cart.php");
 
     }
 
@@ -85,40 +85,11 @@ $mysqli = mysqli_connect('localhost' , 'root', '','shoedb');
 		$sid = $_GET['id'];
 		if(isset($_SESSION['cart'][$sid])){
 			$_SESSION['cart'][$sid]--;
-//			$cart=array();
-//			foreach($_SESSION['cart'] as $sid=>$qty){
-//				$sql_q = "SELECT shoename, price FROM shoes
-//				WHERE shoeid = $sid";
-//				$stmt1=mysqli_prepare($mysqli,$sql_q);
-//
-//				mysqli_stmt_execute($stmt1);
-//				mysqli_stmt_bind_result($stmt1,$shoename, $price);
-//
-//
-//				while(mysqli_stmt_fetch($stmt1)){
-//					$quty=$_SESSION['cart'][$sid];
-//					if($quty=="1"){
-//						$subtotal = $price;
-//					} else {
-//						$subtotal = $price * (int)$quty;
-//					}
-//
-//					if(!isset($totalprice)){
-//						$totalprice=0;
-//					}
-//
-//					$cart[]=array('id' => $sid,
-//						'shoename'=>$shoename,
-//						'price'=>$price,
-//						'quantity'=>$quty,
-//						'subtotal'=>$subtotal);
-//
-//					$totalprice+=$subtotal;
-//				}
-//
-//			}
-
+			if($_SESSION['cart'][$sid] < 0) {
+				unset($_SESSION['cart'][$sid]);
+			}
 		}
+		header("location: cart.php");
 	}
 
 $cart=array();
