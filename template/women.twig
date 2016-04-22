@@ -1,0 +1,114 @@
+{% extends "index.twig" %}
+
+{% block BODY %}	
+<div class="search">
+				<form action="women-search.php" method="GET" style="margin-left: 450px; width: 2500px;">
+					<input type="text" placeholder="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}" required="" name="str">
+					<input type="submit" value="Search">
+				</form>
+			</div>
+			<div class="clearfix"> </div>
+	<!-- men -->
+	<div class="men">
+		<!-- container -->
+		<div class="container">
+			<div class="col-md-9 fashions">
+				<div class="title">
+					<h3>SHOES</h3>
+				</div>
+				<div class="fashion-section">
+					<div class="fashion-grid1">
+						{% for x in values%}
+						 <div class="col-md-3 fashion-grid">
+							 <a href="single.php?id={{x.shoeid}}"><img src="{{x.pic}}" alt="" style="display: inline;  max-width: 100%;
+    height: 220px; width: 100px\9; opacity: 1;"/>
+								 <div class="product">
+									 <h3>{{x.shoename}}</h3>
+									 <p><span></span> $ {{x.price}} </p>
+								 </div>							 
+							 </a>
+							 <div class="fashion-view"><span></span>
+										<div class="clearfix"></div>
+									 <h4><a href="single.php?id={{x.shoeid}}">Quick View</a></h4>
+								 <h4><a href='cart.php?id={{x.shoeid}}&&action=add'>BUY NOW</a></h4>
+							 </div>
+							 
+						 </div>
+
+						 {% endfor %}
+						 <div class="clearfix"></div>
+
+						  <div> <br> </div>
+						<div style='text-align: center;'>
+				        {% for page in 1..pages %}
+				        
+				        <a href='women.php?page={{page}}'> {{page}} </a>
+				            {% if page % 10 == 0 %}
+				                <br>
+				            {% endif %}
+				        {% endfor %}
+				       
+				        (Page {{ page }} of {{ lastpage }})
+				        <a href='women.php?page=1'> FIRST </a>
+
+				        {% if page == '1' %}
+				            PREV
+				        {% else %}    
+				        <a href='women.php?page={{page-1}}'> PREV </a>
+				        {% endif %}
+
+				        {% if page == lastpage %}
+				            NEXT
+				        {% else %}    
+				        <a href='women.php?page={{page+1}}'> NEXT </a>
+				        {% endif %}
+				        <a href='women.php?page={{lastpage}}'> LAST </a>
+				    
+				    </div>
+				</div>
+			</div>
+			<!-- <div class="col-md-3 side-bar">
+				<div class="categories">
+					<h3>CATEGORIES</h3>
+					<ul>
+						<li><a href="#">accessories</a></li>
+						<li><a href="#">basics</a></li>
+						<li><a href="#">jackets</a></li>
+						<li><a href="#">jeans</a></li>
+						<li><a href="#">knits</a></li>
+						<li><a href="#">overalls</a></li>
+						<li><a href="#">over coats</a></li>
+						<li><a href="#">shoes</a></li>
+						<li><a href="#">sweatshirts</a></li>
+						<li><a href="#">trousers</a></li>
+						<li><a href="#"><del>tops</del></a></li>
+						<li><a href="#">watersuits</a></li>
+					</ul>
+				</div>
+				<div class="sales">
+					<h3>SALE</h3>
+					 <div class="pricing">
+						 <h4>Price range</h4>
+						 <input type="text" placeholder="price from" required/>
+						 <input type="text" placeholder="price to" required/>
+						 <div class="clearfix"></div>
+					 </div>
+					 <div class="size">
+						 <h4>Size</h4>
+						 <ul>
+							 <li><a href="#">XS</a></li>
+							 <li><a href="#">S</a></li>
+							 <li><a href="#">M</a></li>
+							 <li><a href="#">L</a></li>
+							 <li><a href="#">XL</a></li>
+						 </ul>
+					 </div>
+				</div>
+			</div> -->
+
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //men -->
+{% endblock %}

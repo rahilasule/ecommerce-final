@@ -1,0 +1,4 @@
+AuthName "Restricted Access"
+AuthType Basic
+AuthUserFile /Users/rahilasule/tmp/.htpasswd 
+require valid-user

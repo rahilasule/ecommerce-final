@@ -1,0 +1,44 @@
+{% extends "index.twig" %}
+
+{% block BODY %}
+	<!-- cart -->
+<link href="web/css/style.css" rel="stylesheet" type="text/css">
+		<!-- container -->
+		{% if cart is empty %}
+		<div class="container" style="text-align:center;">
+			<h3>Your Shopping Cart is empty.</h3>
+		</div>
+		{% else %}
+		<!-- container -->
+		<title>View shopping cart</title>
+
+		<body>
+			<table style="margin-left:80px;" width="100%"  cellpadding="0" cellspacing="0">
+					<thead>
+					<h1 align="center">View Cart</h1>
+					<tr><th>Name</th><th>Quantity</th><th>Price</th><th>Total</th><th>Remove</th>
+					</tr>
+					</thead>
+					<tbody>
+					{% for x in cart%}
+					<tr>
+						<td>{{x.shoename}}</td>
+						<td>{{x.quantity}} <a href='cart.php?id={{x.id}}&&action=decrease'><b> - </b></a>
+						<a href='cart.php?id={{x.id}}&&action=increase'><b> + </b></a></td>
+						<td>{{x.price}}</td>
+						<td>$ {{x.subtotal}}</td>
+						<td><a href='cart.php?id={{x.id}}&&action=remove'><b> X </b></a></td>
+						</tr>
+					{% endfor %}
+					</tbody>
+			</table>
+					<br>
+					<span style="margin-left:1100px"><b>Total:  </b>  $ {{total}}</span>
+				<br>
+			<div style="margin-left:1000px; margin-top:5px; margin-bottom:5px;">
+			<span><a href='form.php'><button>Checkout</button></a></span>
+					<span><a href='cart.php?action=empty'><button>Empty Cart</button></a></span></div>
+		</body>
+		{% endif %}
+	<!-- //cart -->
+{% endblock %}

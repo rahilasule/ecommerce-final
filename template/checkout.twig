@@ -1,0 +1,72 @@
+{% extends "index.twig" %}
+
+	{# BODY block will be overidden #}
+{% block BODY %}
+    <div class="banner-top">
+        <div class="container">
+            <h1>Checkout</h1>
+            <em></em>
+        </div>
+    </div>
+    <!--login-->
+    <div class="container">
+
+        <div class="login">
+            <h3>Shipping Information</h3><br>
+            <form action="checkout.php" method="post">
+               <table>
+                   <tr>
+                    <div>
+                        Firstname:   <input type="text" placeholder="Firstname" required name="firstname">
+                        <span class="error">* <?php if(isset($_SESSION['firstnameErr'])){ echo "{$_SESSION['firstnameErr']}";} ?></span>
+                    </div> </tr>
+                   <tr>
+                    <div>
+                        Lastname:   <input type="text" placeholder="Lastname" required name="lastname">
+                        <span class="error">* <?php if(isset($_SESSION['lastnameErr'])){ echo "{$_SESSION['lastnameErr']}";} ?></span>
+                    </div></tr>
+                   <tr>
+                    <div>
+                        Address:   <input type="text" placeholder="Address" required name="address">
+                        <span class="error">* <?php if(isset($_SESSION['addErr'])){ echo "{$_SESSION['addErr']}";} ?></span>
+                    </div></tr>
+                   <tr>
+                    <div>
+                        City:   <input type="text" placeholder="City" required name="city">
+                        <span class="error">* <?php if(isset($_SESSION['cityErr'])){ echo "{$_SESSION['cityErr']}";} ?></span>
+                    </div></tr>
+                   <tr>
+                    <div>
+                        State:    <input type="text" placeholder="State" name="state">
+                        <span class="error">* <?php if(isset($_SESSION['stateErr'])){ echo "{$_SESSION['stateErr']}";} ?></span>
+                    </div></tr>
+                   <tr>
+                    <div>
+                        Zipcode:    <input type="text" placeholder="Zipcode" required name="zipcode">
+                        <span class="error">* <?php if(isset($_SESSION['zcodeErr'])){ echo "{$_SESSION['zcodeErr']}";} ?></span>
+                    </div></tr>
+                   <tr>
+                    <div>
+                        Country:    <input type="text" placeholder="Country" required name="country">
+                        <span class="error">* <?php if(isset($_SESSION['ctyErr'])){ echo "{$_SESSION['ctyErr']}";} ?></span>
+                    </div></tr>
+                   <tr>
+                    <div>
+                        Phone number:   <input type="text" placeholder="Phone Number" required name="phone">
+                        <span class="error">* <?php if(isset($_SESSION['phoneErr'])){ echo "{$_SESSION['phoneErr']}";} ?></span>
+                    </div></tr>
+                   <tr>
+                       <div>
+                           Email:   <input type="text" placeholder="Email" required name="email">
+                           <span class="error">* <?php if(isset($_SESSION['emailErr'])){ echo "{$_SESSION['emailErr']}";} ?></span>
+                       </div></tr>
+                   <tr>
+                    <div><input type="submit" value="SUBMIT"></div></tr>
+               </table>
+
+            </form> <br>
+        </div>
+    </div>
+
+
+{% endblock %}

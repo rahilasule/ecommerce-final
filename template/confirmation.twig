@@ -1,0 +1,12 @@
+{% extends "index.twig" %}
+
+	{# BODY block will be overidden #}
+{% block BODY %}
+    <div class="container" style="text-align:center;">
+    <h3><b>ORDER CONFIRMATION</b></h3><br>
+    <h2 style="text-align: center">Yayyy, {{ fname }}! </h2>
+        <p style="text-align: center">Your order is being processed! You will receive a
+        confirmation email soon.</p>
+    <span><a href="index.php">Go back HOME</a></span>
+    </div>
+{% endblock %}

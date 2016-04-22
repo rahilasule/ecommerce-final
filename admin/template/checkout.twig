@@ -1,0 +1,63 @@
+{% extends "index.twig" %}
+
+	{# BODY block will be overidden #}
+{% block BODY %}
+    <div class="banner-top">
+        <div class="container">
+            <h1>Checkout</h1>
+            <em></em>
+        </div>
+    </div>
+    <!--login-->
+    <div class="container">
+
+        <div class="login">
+            <h3>Shipping Information</h3><br>
+            <form action="checkout.php" method="post">
+               <table>
+                   <tr>
+                    <div>
+                        Firstname:   <input type="text" placeholder="Firstname" required name="firstname">
+                    </div> </tr>
+                   <tr>
+                    <div>
+                        Lastname:   <input type="text" placeholder="Lastname" required name="lastname">
+                    </div></tr>
+                   <tr>
+                    <div>
+                        Address:   <input type="text" placeholder="Address" required name="address">
+                    </div></tr>
+                   <tr>
+                    <div>
+                        City:   <input type="text" placeholder="City" required name="city">
+                    </div></tr>
+                   <tr>
+                    <div>
+                        State:    <input type="text" placeholder="State" required name="state">
+                    </div></tr>
+                   <tr>
+                    <div>
+                        Zipcode:    <input type="text" placeholder="Zipcode" required name="zipcode">
+                    </div></tr>
+                   <tr>
+                    <div>
+                        Country:    <input type="text" placeholder="Country" required name="country">
+                    </div></tr>
+                   <tr>
+                    <div>
+                        Phone number:   <input type="text" placeholder="Phone Number" required name="phone">
+                    </div></tr>
+                   <tr>
+                       <div>
+                           Email:   <input type="text" placeholder="Email" required name="email">
+                       </div></tr>
+                   <tr>
+                    <div><input type="submit" value="SUBMIT"></div></tr>
+               </table>
+
+            </form> <br>
+        </div>
+    </div>
+
+
+{% endblock %}

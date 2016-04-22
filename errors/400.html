@@ -1,0 +1,218 @@
+<!--
+Author: Rahila Sule
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biruang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstarp-css -->
+    <link href="../web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--// bootstarp-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="../web/css/style.css" type="text/css" media="all" />
+    <!--// css -->
+    <script src="../web/js/jquery.min.js"></script>
+    <!--fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <!--/fonts-->
+    <!-- dropdown -->
+    <script src="../web/js/jquery.easydropdown.js"></script>
+    <link href="../web/css/nav.css" rel="stylesheet" type="text/css" media="all"/>
+    <script src="../web/js/scripts.js" type="text/javascript"></script>
+    <!--js-->
+    <!--/js-->
+    <script src="../web/js/easyResponsiveTabs.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="../web/js/move-top.js"></script>
+    <script type="text/javascript" src="../web/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+    <!-- container -->
+    <div class="container">
+        <!-- header-top -->
+        <div class="header-top">
+            <div class="header-logo">
+                <a href="../index.php"><img src="../web/images/logo.png" alt="" /></a>
+            </div>
+            <div class="header-right">
+                <ul>
+                    <li class="phone">+233 54 290 7500</li>
+                    <li class="mail"><a href="mailto:rahila.sule@ashesi.edu.gh">info@biruang.com</a></li>
+                    <!--<li class="checkout">-->
+                        <!--<a href="../cart.php">-->
+                            <!--&lt;!&ndash;<span class="cart">$ {{total}}</span>&ndash;&gt;-->
+                            <!--<span class="check">Checkout</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <!-- //header-top -->
+        <div class="top-nav">
+            <span class="menu"><img src="../web/images/menu.png" alt=""></span>
+            <ul class="nav">
+                <li class="dropdown1"><a href="../index.php">HOME</a>
+                    <!-- 	<ul class="dropdown2">
+                            <li><a href="single.html">lorem</a></li>
+                            <li><a href="single.html">dorem sia</a></li>
+                            <li><a href="single.html">erik</a></li>
+                            <li><a href="single.html">ipsum padamans</a></li>
+                            <li><a href="single.html">behance</a></li>
+                        </ul> -->
+                </li>
+
+                <li class="dropdown1"><a href="../men.php">MEN</a>
+                    <!-- <ul class="dropdown2">
+                        <li><a href="men.html">Clothing</a></li>
+                        <li><a href="men.html">Footwear</a></li>
+                        <li><a href="men.html">Watches</a></li>
+                        <li><a href="men.html">Accessories</a></li>
+                    </ul> -->
+                </li>
+                <li class="dropdown1"><a href="../women.php">WOMEN</a>
+                    <!-- <ul class="dropdown2">
+                        <li><a href="women.html">Ethnic Wear</a></li>
+                        <li><a href="women.html">Western Wear</a></li>
+                        <li><a href="women.html">All Jewellery</a></li>
+                        <li><a href="women.html">Beauty & Wellness</a></li>
+                    </ul> -->
+                </li>
+
+                <li class="dropdown1"><a href="../brands.php?action=all">BRANDS</a>
+                    <ul class="dropdown2">
+                        <li><a href="../brands.php?action=nike">Nike</a></li>
+                        <li><a href="../brands.php?action=puma">PUMA</a></li>
+                        <li><a href="../brands.php?action=zara">Zara</a></li>
+                        <li><a href="../brands.php?action=hm">H&M</a></li>
+                        <li><a href="../brands.php?action=converse">Converse</a></li>
+                        <li><a href="../brands.php?action=new">New Balance</a></li>
+                        <li><a href="../brands.php?action=adidas">adidas Originals</a></li>
+                        <li><a href="../brands.php?action=saucony">Saucony</a></li>
+                        <li><a href="../brands.php?action=asics">ASICS</a></li>
+                        <li><a href="../brands.php?action=brooks">Brooks</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="about.html">ABOUT US</a></li>  -->
+                <!-- <li><a href="404.html">SUPPORT</a></li> -->
+            </ul>
+        </div>
+        <!-- script-for-menu -->
+        <script>
+            $("span.menu").click(function(){
+                $(" ul.nav").slideToggle("slow" , function(){
+                });
+            });
+        </script>
+    </div>
+    <!-- //container -->
+</div>
+<!-- //header -->
+<!-- support -->
+<div class="support-info">
+    <!-- container -->
+    <div class="container">
+        <h1>Oops!! Bad request!!</h1>
+        <h2>Error!! 400</h2>
+        <a href="../index.php">BACK</a>
+    </div>
+    <!-- //container -->
+</div>
+<!-- //support -->
+<!-- footer -->
+<div class="footer" >
+    <!-- container -->
+    <div class="container" style='margin-top:10px;'>
+        <div class="col-md-5 stores-grid">
+            <!-- <div class="stores">
+                <h3>Our Stores</h3>
+                <ul>
+                    <li>Feel free to visit our stores or contact us.</li>
+                    <li>1401 South Grand Avenue </li>
+                    <li>Los Angeles, CA 90015 </li>
+                    <li>(213) 748-2411</li>
+
+                    <span>
+                    <li class="drive">100 Fairview Drive </li>
+                    <li>Franklin, VA 23851</li>
+                    <li>(757) 569-6100 </li>
+                    </span>
+                </ul>
+            </div> -->
+            <div class="social-icons white-icons">
+                <ul>
+                    <li><a href="#" class="facebook"></a></li>
+                    <li><a href="#" class="twitter"></a></li>
+                    <li><a href="#" class="chrome"></a></li>
+                    <li><a href="#" class="vimeo"></a></li>
+                    <li><a href="#" class="rss"></a></li>
+            </div>
+        </div>
+        <!-- <div class="col-md-3 blog">
+            <h3>Blog posts</h3>
+            <a href="#">Justin Bieber confirmed that he is gay.</a>
+            <p>Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Donec sed auctor elit.
+            </p>
+            <a href="#">New sexy sport clothes are here!</a>
+            <p>Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Donec sed auctor elit.
+            </p>
+            <a href="#">Summer sales are coming!</a>
+            <p>Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Donec sed auctor elit.
+            </p>
+        </div> -->
+        <div class="col-md-5 support" style='margin-left:10px'>
+            <h3>Support</h3>
+            <div class="support-grids">
+                <div class="support-left">
+                    <ul>
+                        <li><a href="termsandcons.php">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <!-- 		<div class="col-md-4 contact">
+                    <h3>Contact us</h3>
+                    <form>
+                        <input type="text" value="your e-mail..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'your e-mail...';}" required="">
+                        <textarea value="your text...:" onfocus="if(this.value == 'your text...') this.value='';" onblur="if(this.value == '') this.value='your text...';">your text...</textarea>
+                        <input type="submit" value="Send MESSAGE">
+                    </form>
+                </div> -->
+        <div class="clearfix"> </div>
+        <div class="copyright">
+            <p>2016 Biruang</p>
+            </p>
+        </div>
+        <!-- // container -->
+    </div>
+    <!-- //footer -->
+</body>
+</html>

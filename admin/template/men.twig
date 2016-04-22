@@ -1,0 +1,75 @@
+{% extends "index.twig" %}
+
+{% block BODY %}
+<div class="search">
+				<form action="men-search.php" method="GET" style="margin-left: 450px; width: 2500px;">
+					<input type="text" placeholder="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}" required="" name="str">
+					<input type="submit" value="Search">
+				</form>
+			</div>
+			<div class="clearfix"> </div>	
+	<!-- men -->
+	<div class="men">
+		<!-- container -->
+		<div class="container">
+			<div class="col-md-9 fashions">
+				<div class="title">
+					<h3>SHOES</h3>
+				</div>
+				<div class="fashion-section">
+					<div class="fashion-grid1">
+						{% for x in values%}
+						 <div class="col-md-3 fashion-grid">
+							 <a href="single.php?id={{x.shoeid}}"><img src="web/images/m4.jpg" alt=""/>
+								 <div class="product">
+									 <h3>{{x.shoename}}</h3>
+									 <p><span></span> $ {{x.price}} </p>								 
+								 </div>							 
+							 </a>
+							 <div class="fashion-view"><span></span>
+										<div class="clearfix"></div>
+									 <h4><a href="single.php?id={{x.shoeid}}">Quick View</a></h4>
+
+
+
+							 </div>
+						 </div>
+						 {% endfor %}
+						 <div class="clearfix"></div>
+
+						 <div> <br> </div>
+						<div style='text-align: center;'>
+				        {% for page in 1..pages %}
+				        
+				        <a href='men.php?page={{page}}'> {{page}} </a>
+				            {% if page % 10 == 0 %}
+				                <br>
+				            {% endif %}
+				        {% endfor %}
+				       
+				        (Page {{ page }} of {{ lastpage }})
+				        <a href='men.php?page=1'> FIRST </a>
+
+				        {% if page == '1' %}
+				            PREV
+				        {% else %}    
+				        <a href='men.php?page={{page-1}}'> PREV </a>
+				        {% endif %}
+
+				        {% if page == lastpage %}
+				            NEXT
+				        {% else %}    
+				        <a href='men.php?page={{page+1}}'> NEXT </a>
+				        {% endif %}
+				        <a href='men.php?page={{lastpage}}'> LAST </a>
+				    
+				    </div>
+				</div>
+			</div>
+
+			<div class="clearfix"> </div>
+		</div>
+		<!-- //container -->
+	</div>
+	<!-- //men -->
+{% endblock %}
