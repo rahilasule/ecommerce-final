@@ -328,7 +328,7 @@
       <option name="presentableId" value="Default" />
       <updated>1461018253443</updated>
       <workItem from="1461018255000" duration="46182000" />
-      <workItem from="1461195317921" duration="57479000" />
+      <workItem from="1461195317921" duration="57538000" />
     </task>
     <task id="LOCAL-00001" summary="made a few changes">
       <created>1461321159084</created>
@@ -337,11 +337,18 @@
       <option name="project" value="LOCAL" />
       <updated>1461321159084</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="everything should work">
+      <created>1461344482679</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1461344482679</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103661000" />
+    <option name="totallyTimeSpent" value="103720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -390,7 +397,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="made a few changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="made a few changes" />
+    <MESSAGE value="everything should work" />
+    <option name="LAST_COMMIT_MESSAGE" value="everything should work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
